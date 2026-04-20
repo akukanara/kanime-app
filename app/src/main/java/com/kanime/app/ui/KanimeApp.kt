@@ -6,10 +6,8 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope.weight
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope.weight
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -917,7 +915,7 @@ private fun DiscoverAnimeCard(
                         )
                 )
                 Column(
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.width(220.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
@@ -984,7 +982,7 @@ private fun DownloadItemCard(anime: Anime, onOpenDetail: (Anime) -> Unit) {
                     tint = Color(anime.accent)
                 )
             }
-            Column(modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier.width(210.dp)) {
                 Text(
                     text = anime.title,
                     style = MaterialTheme.typography.titleMedium,
@@ -1013,19 +1011,19 @@ private fun DetailStatRow(anime: Anime) {
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         DetailStatCard(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.width(108.dp),
             icon = Icons.Rounded.Schedule,
             title = "Durasi",
             value = anime.duration
         )
         DetailStatCard(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.width(108.dp),
             icon = Icons.Rounded.VideoLibrary,
             title = "Episode",
             value = anime.episodes.toString()
         )
         DetailStatCard(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.width(108.dp),
             icon = Icons.Rounded.Bookmark,
             title = "Rating",
             value = anime.rating.toString()
@@ -1266,7 +1264,7 @@ private fun ContinueWatchingCard(
             Spacer(modifier = Modifier.width(16.dp))
 
             Column(
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.width(220.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
@@ -1388,7 +1386,7 @@ private fun ScheduleSection(items: List<Anime>, onOpenDetail: (Anime) -> Unit) {
                             tint = Color(anime.accent)
                         )
                     }
-                    Column(modifier = Modifier.weight(1f)) {
+                    Column(modifier = Modifier.width(210.dp)) {
                         Text(
                             text = anime.title,
                             style = MaterialTheme.typography.titleMedium,
